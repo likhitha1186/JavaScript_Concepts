@@ -1,0 +1,6 @@
+function Print(name){
+    console.log("Hello World");
+
+    console.log("My name is : " , name);
+}
+Print("Likhitha")
