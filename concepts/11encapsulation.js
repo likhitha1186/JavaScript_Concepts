@@ -1,5 +1,5 @@
 /*
-Encapsulation : wrapping of data and functions under sinlge unit. 
+Encapsulation : wrapping of data and functions/methods under sinlge unit. 
 it is the  mechanism that binds together  code and data.
 the js encapsulation is a process if binding the data i.e variable with the function acting on that data.
 and we  are working on these variables using nethods.  
