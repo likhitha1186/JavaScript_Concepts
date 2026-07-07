@@ -36,3 +36,50 @@ console.log(arr[2]); //Script
 //trim() : remove extra space in the right and left.
 a= "    welcome to JavaScript      "
 console.log(a.trim()) //welcome to JavaScript
+<<<<<<< HEAD
+=======
+
+//Number : is also an object in JavaScript
+let x =100;
+let y=new Number(100);
+console.log(x); //100
+console.log(y); //[Number: 100]
+
+let x1=102; //integer value
+let y1=1253.2  //decimal value
+let z1=10e2   // exponential value
+console.log(x1,y1,z1) //102 1253.2 1000
+
+//methods available in Number
+//1. isInteger() : method will verify whether the variable is having integer or not. it will return true or false
+x=10;
+y=25.4
+let z="x";
+
+console.log(Number.isInteger(x)); //true
+console.log(Number.isInteger(y)); //false
+console.log(Number.isInteger(z));  //false
+
+//parseInt() : it will converts a string into number.
+let str= "Welcome to JavaScript";
+console.log(Number.parseInt(str)); //NaN
+console.log(typeof(str)); //string
+
+str="123456";
+console.log(Number.parseInt(str)); //123456
+console.log(typeof(str));  //string
+
+str = "1245.36"
+console.log(typeof(str));
+console.log(Number.parseInt(str)); //1245
+
+//parseFloat(): it will converts a string into number.
+str = "124.23"
+console.log(typeof(str)); //string
+console.log(typeof(Number.parseFloat(str))); //number
+
+//toString() : convert number into string.
+let n=123456;
+console.log(typeof(n)) //number
+console.log(typeof(Number.toString(n))) //string
+>>>>>>> 45175bae0526a80ea6967a0a9245b80ddd1556b6
