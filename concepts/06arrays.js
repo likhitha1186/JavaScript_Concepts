@@ -77,7 +77,7 @@ console.log(myArray instanceof Array); //output: true
 let fruits=["Banana", "mango","apple"]
 console.log(fruits); //output: [ 'Banana', 'mango', 'apple' ]
 
-//toSting(): an method it will convert an array to a String by separating values by commas
+//toSting(): an method it will convert an array to a String by separating values by commas. 
 console.log(fruits.toString()); //Banana,mango,apple
 
 //join() : an method separate an array by specifying any king of special character
