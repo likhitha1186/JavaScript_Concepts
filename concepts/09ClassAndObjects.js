@@ -84,7 +84,7 @@ class LoginPage {
 const loginPage = new LoginPage(page);
 await loginPage.login("testuser", "Pass@123");
 
-Real-time (2K Portal): Each page object (LoginPage, RegistrationPage, SSOPage) is a class. In your test spec files, you create objects like new LoginPage(page) and call methods on them — this keeps tests clean and reusable across DEV/STG environments
+//Real-time (2K Portal): Each page object (LoginPage, RegistrationPage, SSOPage) is a class. In your test spec files, you create objects like new LoginPage(page) and call methods on them — this keeps tests clean and reusable across DEV/STG environments
 
 /*
 Constructor
