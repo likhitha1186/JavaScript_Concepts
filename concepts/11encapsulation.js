@@ -1,10 +1,15 @@
 /*
-Encapsulation : wrapping of data and functions/methods under sinlge unit. 
-it is the  mechanism that binds together  code and data.
-the js encapsulation is a process if binding the data i.e variable with the function acting on that data.
-and we  are working on these variables using nethods.  
+Encapsulation : wrapping of data and functions/methods under single unit.
+it is the mechanism that binds together code and data.
+wrapping of data members(variable) with function members (methods) to form a single unit.
+declare the variable as a private class field using # or use closures, restrict it's direct access outside the class and provide indirect access by using public services using gets() abd set().
+the js encapsulation is a process if binding the data i.e. variable with the function acting on that data.
+and we  are working on these variables using methods.
 
-Bundling data (properties) and methods that operate on that data within a single unit (class), and restricting direct access to internal details.
+Encapsulation means combining variables and methods into a single class or object and hiding the internal data from outside access.
+We use private fields (#) to hide the data and getter and setter methods to provide controlled access.
+
+Binding data (properties) and methods that operate on that data within a single unit (class), and restricting direct access to internal details.
 
 */
 
@@ -52,4 +57,5 @@ const client = new ApiClient("xyz123");
 console.log(client.getAuthHeader()); // works
 console.log(client.#authToken);      // Error: private field
 
-/*In your REST/SOAP API testing utility classes (Postman/ReadyAPI scripting or custom JS API clients), the auth token or session cookie is kept private and only exposed through controlled methods.
+/*In your REST/SOAP API testing utility classes (Postman/ReadyAPI scripting or custom JS API clients), the auth token or session cookie is kept private and only exposed through controlled methods
+*/

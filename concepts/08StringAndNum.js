@@ -82,4 +82,3 @@ console.log(typeof(Number.parseFloat(str))); //number
 let n=123456;
 console.log(typeof(n)) //number
 console.log(typeof(Number.toString(n))) //string
->>>>>>> 45175bae0526a80ea6967a0a9245b80ddd1556b6
