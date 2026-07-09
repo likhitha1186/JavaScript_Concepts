@@ -5,7 +5,7 @@
 3. Jumping statements: break, continue, return
 */
 //1. conditional statements: allows us to execute a block of code based on a certain condition  
-//if condtition: means that if the condition is true, then the block of code will be executed, otherwise it will be skipped.
+//if condition: means that if the condition is true, then the block of code will be executed, otherwise it will be skipped.
 var age=18;
 if(age>=18){
     console.log("You are eligible to vote");
@@ -50,9 +50,9 @@ switch(day){
 
 //2. looping statements: allows us to execute a block of code multiple times based on a certain condition
 //while loop: means that it will execute the block of code as long as the condition is true.
-// whuile(condition){
+// while(condition){
 //     //block of code
-// }  starting and ending contion we should know before executing the loop.
+// }  starting and ending condition we should know before executing the loop.
 
 let i=1;
 while(i<=10){

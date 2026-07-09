@@ -36,8 +36,6 @@ console.log(arr[2]); //Script
 //trim() : remove extra space in the right and left.
 a= "    welcome to JavaScript      "
 console.log(a.trim()) //welcome to JavaScript
-<<<<<<< HEAD
-=======
 
 //Number : is also an object in JavaScript
 let x =100;

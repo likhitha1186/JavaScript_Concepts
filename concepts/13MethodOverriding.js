@@ -22,3 +22,4 @@ class SSOPage extends BasePage {
   }
 }
 /*Different SSO providers (Google, Steam, Xbox, PSN) each redirect differently. You override waitForLoad() or login() in each provider-specific page class while reusing the common flow from BasePage.
+*/

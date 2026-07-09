@@ -1,4 +1,4 @@
-//multi line 
+/* multi line */
 var x; //declaration
 x=10;  //initialization
 
