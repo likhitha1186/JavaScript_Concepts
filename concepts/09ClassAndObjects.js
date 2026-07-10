@@ -100,8 +100,20 @@ Real-time: Your BasePage constructor likely takes the Playwright page object and
 
 
 this Keyword
+this is a special keyword in JavaScript that refers to the current object or context in which a function is executed.
+| Purpose                       | Why we use it                                   |
+| ----------------------------- | ----------------------------------------------- |
+| Access class properties       | To use variables throughout the class           |
+| Access methods inside a class | To call another method from the same class      |
+| Store reusable objects        | Example: Playwright `page`, locators, test data |
+| Maintain object state         | Keep values available across methods            |
 
 Definition: this refers to the object that is currently executing/calling the method. Its value depends on how a function is called, not where it's defined.
+In my Playwright automation framework, I use this mainly in Page Object Model classes to maintain page-level objects and locators.
+For example, in the constructor, I assign this.page = page and initialize locators like this.username = page.locator(). Later, inside methods,
+I access these properties using this because it refers to the current page object. It helps in reusability and avoids creating locators repeatedly.
+I also take care with callbacks because normal functions have their own this, whereas arrow functions inherit this from the parent scope.
+
 class AccountPage {
   constructor(page) {
     this.page = page;
