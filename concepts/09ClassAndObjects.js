@@ -141,7 +141,7 @@ class Reporter {
 
 Instance Variables
 
-Definition: Variables declared inside the constructor using this.variableName, unique to each object created from the class.
+Definition:  Variables declared inside the constructor using this.variableName, unique to each object created from the class.
 class TestUser {
   constructor(username, email) {
     this.username = username; // instance variable
