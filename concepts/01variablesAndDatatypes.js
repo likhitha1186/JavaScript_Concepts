@@ -18,7 +18,7 @@ console.log(str); //output: welcome
 
 //difference between var and let
 //var is function scoped and can be re-declared and updated
-//let is block scoped and can be updated but cannot be re-declared  
+//let is block scoped and can be updated/reinitialized but cannot be re-declared  
 
 /*
   console.log(x); 
@@ -82,3 +82,5 @@ console.log(typeof(salary)); //output: object
 // when an variable assigned with undefined, that variable is considers as undefined type
 //undefined: means that a variable has been declared but has not yet been assigned a value. It is the default value of uninitialized variables.
 //null: means that a variable has been explicitly assigned a value of null, which represents the intentional absence of any object value. It is often used to indicate that a variable should not point to any object or value.
+
+

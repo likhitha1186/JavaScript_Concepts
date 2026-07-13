@@ -120,7 +120,6 @@ console.log(arr1.concat(arr2)) //[ 10, 20, 'A', 'B', 'C' ]
 let arr3=["k","l","m"]
 console.log(arr1.concat(arr2,arr3)) //[10,  20,  'A', 'B','C', 'k', 'l', 'm']
 
-
 //slice(): create a new array, some portion of the array. It will create a new array based on the index we will pass.
 let fruit=["Banana","Mango","Orange","Kiwi"];
 fruit.slice(1)
@@ -140,3 +139,87 @@ console.log(num.sort()); // [0.5,100,23.8, 25,36 456,78]
 //reverse() :
 fruit=["Banana","Mango","Orange","Kiwi","Apple"];
 console.log(fruit.reverse()); //[ 'Apple', 'Kiwi', 'Orange', 'Mango', 'Banana' ]
+
+//splice(): method add/remove specific elements in the array. 
+//removes elements from an arry and if necesary , inserts new elements in their place returning the deleted element.
+fruits=["Banana","Mango","Orange","Kiwi","Apple"];
+fruits.splice(1,1,'Pomogranate') //it will take 3 parameter. start , delete count, new element to be added 
+console.log(fruits); //[ 'Banana', 'Pomogranate', 'Orange', 'Kiwi', 'Apple' ]
+console.log(fruits.splice(1,1))  //Pomogranate
+console.log(fruits); //[ 'Banana', 'Orange', 'Kiwi', 'Apple' ]
+
+//indexOf(): method return the first index of an element in an array. if the element is not found, it will return -1.
+fruits=["Banana","Mango","Orange","Kiwi","Apple","Banana"];
+console.log(fruits.indexOf("Mango"));   //1  
+console.log(fruits.indexOf("Grapes"));  //-1
+
+//return 2nd index of an array
+let secondIndex=fruits.indexOf("Mango",3); //it will start searching from index 3
+console.log(secondIndex); //-1
+
+secondIndex = fruits.indexOf("Banana", fruits.indexOf("Banana")+1); 
+console.log(secondIndex); //-1
+
+//includes(): method return true if the element is found in an array, otherwise it will return false.
+console.log(fruits.includes("Mango")); //true
+console.log(fruits.includes("Grapes")); //false
+
+//array methods: map(), filter(), reduce() are used to perform operations on an array and return a new array or a single value based on the operation performed. These methods are used to manipulate the data in an array and are very useful in functional programming.
+//1. map(): method creates a new array by performing a function on each element of the original array. It takes a callback function as an argument and applies it to each element of the array, returning a new array with the results.
+//Calls a defined callback function on each element of an array and returns an array that contains the reult.
+
+let numbers=[1,2,3,4];
+let doubleNumbers = numbers.map((e)=> e*2);
+console.log(doubleNumbers) //[2,4,6,8]
+// map() → Returns a new array by modifying each element.
+//filter() → Returns a new array with matching elements.
+//reduce() → Returns a single value (sum, product, object, etc.).
+
+
+//2. filter() : method create new array. a function that accepts upto three arguments.
+//The filter method calls the predicate/boolen/conditional function one time for each elemnts in the aray.
+//rerurns the elements of the array that meets the condition specified in a callback function.
+num = [10,20,53,45]
+let evenNum =num.filter((e)=> e%2===0)
+console.log(evenNum) //[10,20]
+
+num = [14, 14, 15, 23];
+let uniqueNum = num.filter((value, index, arr) => {
+  return arr.indexOf(value) === index;
+});
+console.log(uniqueNum); //[14,15,23]
+
+//reduce(): method will reduce an array to single value.
+//calls the specified callback function for all the elemnts in an array. /
+//the return value of the callback function is the accumulated result and is provided as an argument in the next call to the callback function.
+//callbackfn: a function that accepts up to 4 arguments, the reduce method calls the callback func one time for each element in the array.
+//initialValue: if initial value is specified it is used as the initial value to start the accumulatio. the first call to the callbackfn provides this value  as an arguments insted of an array value.
+//acc:hold the final output, num: each and every element of an array
+num =[1,2,3,5] 
+let sum = num.reduce((acc, num)=>acc+num, 0)
+console.log(sum) //11
+/*
+1st ==> 0+1=1
+2nd===> 1+2=3
+3rd====>3+3=6
+4th====>6+5=11
+*/
+
+num=[1,2,4,5,2]
+let count=num.reduce((acc,num)=> acc+1,0)
+console.log(count)
+
+num=[1,2,8,1,22,5,1,20,2,1]
+let occ=num.reduce((acc,num)=> {
+    acc[num]= (acc[num]||0)+1
+    return acc;
+},{});
+console.log(occ)
+
+num=[10,55,23,896,45]
+let max = num.reduce((max,num)=>{
+    if(num>max)
+        return num;
+    return max;
+}, num[0]);
+console.log(max)

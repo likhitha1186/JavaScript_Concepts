@@ -48,7 +48,7 @@ switch(day){
         console.log("Invalid day");
 }
 
-//2. looping statements: allows us to execute a block of code multiple times based on a certain condition
+//2. looping statements: allows us to execute a block of code multiple times based on a certain condition.
 //while loop: means that it will execute the block of code as long as the condition is true.
 // while(condition){
 //     //block of code
