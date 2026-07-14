@@ -154,4 +154,59 @@ console.log(generator.next().value);  //3
 console.log(generator.next().value); //4
 console.log(generator.next().value); //undefined
 
+//next(): The next() method of Generator  instances returns an object with two properties done and value.
+// You can also provide a parameter to the next method to send a value to the generator.
+/*
+value – The value to send to the generator.
+    The value will be assigned as a result of a yield expression. For example, in variable = yield expression, the value passed to the .next() function will be assigned to variable.
+    Returns:
+An Object  with two properties:
+    done
+A boolean value:
+    true if the generator is past the end of its control flow. In this case value specifies the return value of the generator (which may be undefined).
+false if the generator is able to produce more values.
+    value
+Any JavaScript value yielded or returned by the generator.
+
+ */
+
+//7. Anonymous function: that does not have any name. no specific name.
+const numbers = [1,2,3,4,5,6];
+const num= numbers.map(function (e){
+    return e*e;
+})
+console.log(num); //[ 1, 4, 9, 16, 25, 36 ]
+
+const Numbers = [1,2,3,4,5,6];
+const addNum =Numbers.map((e)=>{
+    return e+e;
+})
+console.log(addNum); //[ 2, 4, 6, 8, 10, 12 ]
+
+
+//8. Recursive function: a function calls itself during execution.
+function  factorial(num){
+    if(num===0 || num===1){
+        return 1;
+    }
+    else{
+        return  num* factorial(num-1)
+    }
+}
+console.log(factorial(5)); //120
+
+//9. Higher order function: a function take one por more function as an arguments.
+function addition(a,b){
+    return a+b;
+}
+function multiplication(a,b){
+    return a*b;
+}
+function  operator(funcName,a,b){
+    return funcName(a,b)
+}
+const add1= operator(addition,10,20)
+const mul1= operator(multiplication,10,2)
+console.log(add1);  //30
+console.log(mul1) //20
 
