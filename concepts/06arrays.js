@@ -160,7 +160,12 @@ console.log(secondIndex); //-1
 secondIndex = fruits.indexOf("Banana", fruits.indexOf("Banana")+1); 
 console.log(secondIndex); //-1
 
+//lastIndexOf(): returns the index of the last element.
+fruits=["apple","banana","mango","apple", "pear","apple"]
+console.log(fruits.lastIndexOf("apple"))  //5
+
 //includes(): method return true if the element is found in an array, otherwise it will return false.
+fruits=["apple","banana","mango","apple", "pear","apple"]
 console.log(fruits.includes("Mango")); //true
 console.log(fruits.includes("Grapes")); //false
 
@@ -222,4 +227,30 @@ let max = num.reduce((max,num)=>{
         return num;
     return max;
 }, num[0]);
-console.log(max)
+console.log(max);
+
+//every(): all the elements in the array pass for a specific function.
+//return true if all elements of the iterable are true ot not.
+//detemine whether all the membrs of an array satisfy the specified condtion. 
+num=[1,2,3,4,5];
+let flag =num.every((e)=> e<10);
+console.log(flag)  //true
+
+//some() : check one elements in the array passes the particular condition.
+//determine whether the specified callback function returns true for any element of an array.
+num=[1,2,3,4,5,6]
+let s=num.some((e)=>e%2==0)
+console.log(s) //true
+let g=num.some((e)=>e>5)
+console.log(g)  //true
+let g1= num.some((e)=>6>10)
+console.log(g1) //false
+
+//find(): returns the first element that satifies the given condition.
+//returns the value of the first element in the array where predicate is true and undefined otherwise.
+num = [1,2,3,4,5,6];
+let f= num.find((e)=>e%2===0) 
+console.log(f) //2
+num=[10,2,3,4,5,6]
+f=num.find((e)=> e%2===0)
+console.log(f) //10
