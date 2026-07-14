@@ -20,11 +20,36 @@ const add = (a,b)=>{
 console.log(add(4,5));  //9
 
 const person={
-    name:"John",
+    firstName:"John",
+    lastName:"Pet",
     gender:"male",
     phoneNum:"123456789"
 }
-const details = person=>`${person.name} ${person.gender}`
-const data = details(person)
-console.log(data); //John male
+const fullName = person=>`${person.firstName} ${person.lastName}`
+const data = fullName(person)
+console.log(data); //John Pet
 
+const greet=(username="guest",age=0)=> `Hello, ${username}! you are ${age} years old`
+const g= greet();
+console.log(g); //Hello, guest! you are 0 years old
+
+const g1=greet("John",30);
+console.log(g1) //Hello, guest! you are 0 years old
+
+//arrow function with rest arguments or ... parameters, varargs
+const sum = (...numbers) => numbers.reduce((acc,num)=>acc+num,0);
+console.log(sum(1,2,3,4,5));  //15
+
+//default and rest parameter
+const BrowserInfo =(browser='chrome', ...details)=>{
+    console.log(`Browser: ${browser}`)
+    console.log('other details:', details)
+}
+BrowserInfo(); //Browser: chrome, other details: []
+BrowserInfo('firefox', 'headeless mode, mozilla browser')  //Browser: firefox , other details: [ 'headeless mode, mozilla browser' ]
+
+//max number using Math
+const findmaxVamlue = (a,b,c)=>{
+   return Math.max(a,b,c)
+}
+console.log(findmaxVamlue(10,25,36)) //36
