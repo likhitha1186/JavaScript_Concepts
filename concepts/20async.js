@@ -11,7 +11,6 @@ Arrow Function
 Immediately Invoked Function Expression (IIFE)
 Generator Function
 
-
 1. Function Declaration
 The Function Declaration is the traditional method most commonly used in everyday programming .
 Syntax and Implementation
@@ -27,9 +26,22 @@ function is the keyword.
 add is the name of the function.
 a and b are the parameters (inputs).
 return a + b provides the output.
+*/
+function add(a,b){
+    return a+b;
+}
+console.log(add(10,20))  //arguments
 
+//function with no parameter
+function print(){
+    console.log("Good Morning")
+}
+print();
+
+/*
 2. Function Expression
 A Function Expression involves creating a function without a name (an anonymous function) and then assigning it to a variable .
+it can be called by using the variable name.
 Syntax and Implementation
 Unlike a declaration, you do not provide a name immediately after the function keyword. Instead, you treat the function like a value being assigned to a variable .
 Example:
@@ -39,9 +51,17 @@ return a + b;
 console.log(add(100, 200)); // Output: 300
 
 Key Distinction: In a function expression, the name used to call the function is actually the variable name (add or fun) to which the function is assigned .
+*/
 
-3. Arrow Functions
-Arrow Functions are a modern ES6 syntax that provides a more concise way to write functions .
+let sum =function(a,b){
+    return a+b;
+}
+console.log(sum(10,20));
+
+
+/*
+3. Arrow Functions :
+are a modern ES6 syntax that provides a more concise way to write functions .
 Conversion Steps
 To convert a standard function declaration into an arrow function, follow these steps.
 Remove the function keyword .
@@ -63,8 +83,24 @@ let add = (a, b) => a + b;
 
 [!IMPORTANT]
 Pedagogical Advice for Beginners: While one-liner arrow functions are "fancy" and concise, the instructor recommends prioritizing clarity over conciseness when starting out . As a beginner, writing readable code that others can easily understand is more important than using the shortest possible syntax.
+*/
+const sub=(x,y)=> x-y;
+console.log(sub(30,20)); //10
 
-4. Immediately Invoked Function Expression (IIFE)
+const mul= (x,y)=>{
+    return x*y;
+}
+console.log(mul(10,20)); //200
+/*
+4. Function Constructor :
+
+*/
+let subtract = new Function('a','b','return a-b');
+console.log(subtract(25,20)); //5
+
+/*
+
+5. Immediately Invoked Function Expression (IIFE)
 An IIFE (pronounced "iffy") is a specialized pattern where a function is executed immediately upon its declaration .
 Concept and Use Case
 Normally, a function is declared in one place and must be explicitly called in another to run . However, there are specific use cases where you want a function to run the very moment it is defined without needing a separate call later .
@@ -89,30 +125,33 @@ Anonymous Nature: These functions often do not have a name assigned to them .
 Syntax Mechanism: The function is written using the syntax of a function expression, but it is wrapped in parentheses () which triggers immediate execution .
 Use Cases: While the specific practical applications may be complex for beginners, IIFEs are used for specific programming patterns that will be explored in deeper detail in later lessons .
 
-Immediately Invoked Function Expression (IIFE)
-An Immediately Invoked Function Expression (IIFE) is a specialized pattern in JavaScript where a function is executed immediately upon its definition .
+
 Key Characteristics:
-
 No Explicit Call Required: Unlike standard functions, you do not need to call the function by name later in the code .
-
 Anonymous Nature: These functions often do not have a name assigned to them .
-
 Syntax: It utilizes the syntax of a function expression, but instead of assigning it to a variable, parentheses are placed around/after the expression to trigger immediate execution .
 
 Use Cases: While complex to grasp initially, IIFEs have specific architectural use cases in JavaScript development that will be explored in later lessons .
-
 */
+(function(){
+    console.log("Good Morning");  //Good Morning
+})
+();
 
-//1. function declaration:
-function add(a,b){
-    return a+b;
+//6. Generator function: a function returns an iterator object for sequence of value'
+//function* and yield keyword.
+function* generateNumbers(){
+    yield 1;
+    yield 2;
+    yield 3;
+    yield 4;
 }
-console.log(add(10,20))  //arguments
+//console.log(generateNumbers()); //Object [Generator] {}
+const generator = generateNumbers();
+console.log(generator.next().value); //1
+console.log(generator.next().value); //2
+console.log(generator.next().value);  //3
+console.log(generator.next().value); //4
+console.log(generator.next().value); //undefined
 
-//function with no parameter 
-function print(){
-    console.log("Good Morning")
-}
-print();
 
-//2. function expression : 
