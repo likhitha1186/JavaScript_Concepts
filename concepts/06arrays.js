@@ -166,7 +166,7 @@ console.log(fruits.includes("Grapes")); //false
 
 //array methods: map(), filter(), reduce() are used to perform operations on an array and return a new array or a single value based on the operation performed. These methods are used to manipulate the data in an array and are very useful in functional programming.
 //1. map(): method creates a new array by performing a function on each element of the original array. It takes a callback function as an argument and applies it to each element of the array, returning a new array with the results.
-//Calls a defined callback function on each element of an array and returns an array that contains the reult.
+//Calls a defined callback function on each element of an array and returns an array that contains the result.
 
 let numbers=[1,2,3,4];
 let doubleNumbers = numbers.map((e)=> e*2);
@@ -190,7 +190,7 @@ let uniqueNum = num.filter((value, index, arr) => {
 console.log(uniqueNum); //[14,15,23]
 
 //reduce(): method will reduce an array to single value.
-//calls the specified callback function for all the elemnts in an array. /
+//calls the specified callback function for all the elemnts in an array. 
 //the return value of the callback function is the accumulated result and is provided as an argument in the next call to the callback function.
 //callbackfn: a function that accepts up to 4 arguments, the reduce method calls the callback func one time for each element in the array.
 //initialValue: if initial value is specified it is used as the initial value to start the accumulatio. the first call to the callbackfn provides this value  as an arguments insted of an array value.
