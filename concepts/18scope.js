@@ -4,10 +4,9 @@ cannot br accessed from outside the block.
 Block scope is particularly useful for controlling variable visibility and preventing unintended side effects in larger codebases.
 Definition: The visibility of variables is limited to the block in which they are defined, preventing access from outside that block.
 
-function scope: variavle declared inside a function and cannot be accessed from the outside of the function.
+function scope: variable declared inside a function and cannot be accessed from the outside of the function.
 
-global scope: variables declared outside of any function or block are accessible from anywhere in the code, including inside functions and blocks.
-
+global scope: variables declared outside any function or block are accessible from anywhere in the code, including inside functions and blocks.
 
 function currying:
 currying is a process in functional programming in which we transform a function with multiple arguments into a sequence of nesting functions that take one argument at a time.

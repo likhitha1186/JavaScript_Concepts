@@ -4,9 +4,9 @@ which is used in a function, refers t the object it belongs to.
 
 it makes the function reusable for different objects, as it can refer to the object that is calling it.
 
-this value is detemined entirely by how a function is called.
+this value is determined entirely by how a function is called.
 
-hows to detemine 'this'
+how to determine 'this'
 implicit binding
 explicit binding
 new binding

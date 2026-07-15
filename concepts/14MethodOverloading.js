@@ -1,5 +1,6 @@
 /*
-Method Overloading
+Method Overloading : JavaScript does not support true method overloading like Java or C#. If two methods have the same name, the later one overwrites the earlier one.
+method overloading is a compile time polymorphism.
  Definition: Method overloading means having multiple methods with the same name but different parameters (number or type of arguments).
  Languages like Java and C# support this, but JavaScript does not.
 */
@@ -12,6 +13,8 @@ class Example {
     console.log("Hello " + name + ", age " + age);
   }
 }
+const g= new greet("John");
+
 // Only the second greet() exists — the first is overwritten.
 //How JS developers simulate overloading:
 class LoginPage {

@@ -1,5 +1,6 @@
 //class and object:
 /*
+class is a blueprint for creating an object with similar properties and  behaviors.
 class is a collections of variables and methods.
 class is a logical entity which contains variable and methods
 Object is physical entity and an instance of class.

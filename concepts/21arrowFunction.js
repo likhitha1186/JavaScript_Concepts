@@ -46,10 +46,10 @@ const BrowserInfo =(browser='chrome', ...details)=>{
     console.log('other details:', details)
 }
 BrowserInfo(); //Browser: chrome, other details: []
-BrowserInfo('firefox', 'headeless mode, mozilla browser')  //Browser: firefox , other details: [ 'headeless mode, mozilla browser' ]
+BrowserInfo('firefox', 'headless mode, mozilla browser')  //Browser: firefox , other details: [ 'headless mode, mozilla browser' ]
 
 //max number using Math
-const findmaxVamlue = (a,b,c)=>{
+const findMaxValue = (a,b,c)=>{
    return Math.max(a,b,c)
 }
-console.log(findmaxVamlue(10,25,36)) //36
+console.log(findMaxValue(10,25,36)) //36
