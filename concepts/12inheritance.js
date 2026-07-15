@@ -65,3 +65,56 @@ This is how inheritance helps us reuse common code and avoid duplication in a Pl
 Real-time (this is the core of your framework): In the 2K Portal project, BasePage likely holds common methods (navigate, waitForPageLoad, common locators).
 LoginPage, RegistrationPage, and SSOPage all extend BasePage and reuse that shared logic.
 */
+
+class vehicle{
+  constructor(make, model,year){
+    this.make=make;
+    this.model=model;
+    this.year=year;
+  }
+
+  getInfo(){
+    return `${this.make}, ${this.model}, ${this.year}`
+  }
+  startEngine(){
+    console.log("starting engine.........")
+  }
+  stopEngine(){
+    console.log("stopping engine......")
+  }
+}
+
+//child class:
+ class Car extends vehicle{
+  constructor(make, model, year, fuelType){
+     super(make, model , year)  //super keyword is used to call the parent class constructo
+     this.fuelType=fuelType;
+    }
+
+    driveCar(){
+      console.log("driving the car " + this.model)
+    }
+ }
+
+ class Bike extends vehicle{
+  constructor(make,model,year, color){
+    super(make,model,year)
+    this.color=color;
+  }
+
+  bikeColor(){
+    console.log("bike color is " + this.color) 
+  }
+ }
+
+ const car= new Car("honda","Civic",2023,"petrol")
+
+ const bike = new Bike("KTM","390",2025,"black")
+
+car.driveCar()
+car.startEngine()
+
+bike.bikeColor();
+bike.stopEngine();
+
+//multiple inheritance is not supported by JS
