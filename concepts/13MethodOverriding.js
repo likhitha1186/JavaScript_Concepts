@@ -1,5 +1,5 @@
 /*
-MethodOverriding:
+MethodOverriding: when you have the parent class and the child calss, in the pasrent calss you have the exact method name and same number of parameter you are having in the child calss also.
 Definition: When a child class defines a method with the same name as one in the parent class,
  the child's version replaces (overrides) the parent's version when called on a child object.
  JavaScript supports this natively.
@@ -11,7 +11,7 @@ When the method is called using the child object, the child's implementation is 
  changing the implementation of the parent class without changing the definition of the method within the child class.
  super is keyword which always represent a parent class.
 */
-
+/*
 class BasePage {
   async waitForLoad() {
     console.log("Generic page load wait");
@@ -37,7 +37,7 @@ console.log(sso1.waitForLoad());
 let sso=new SSOPage();
 console.log(sso.waitForLoad());
 
-
+*/
 /*
 Method overriding is when a child class provides its own implementation of a method that already exists in the parent class.
  When we call the method using a child object, the child's implementation is executed.
@@ -47,3 +47,33 @@ Method overriding is when a child class provides its own implementation of a met
   Different SSO providers (Google, Steam, Xbox, PSN) each redirect differently.
  You override waitForLoad() or login() in each provider-specific page class while reusing the common flow from BasePage.
 */
+
+class Car{
+  minspeed=100;
+  constructor(make, model){
+    this.make=make;
+    this.model=model;
+  }
+  startEngine(){
+    console.log('Starting engine ...... for car ')
+  }
+}
+class Audi extends Car{
+  //overriden method from the parent calss;
+   startEngine(){
+       console.log('Starting engine ...... for Audi ')
+  }
+  autoParking(){
+    console.log('audi ==== auto parking')
+  }
+}
+
+const  audi = new Audi();
+audi.startEngine() //Starting engine ...... for Audi 
+audi.autoParking(); //audi ==== auto parking
+
+const car = new Car();
+car.startEngine() //Starting engine ...... for car 
+//car.autoParking()  //car.autoParking is not a function
+
+console.log(audi.minspeed)  //100

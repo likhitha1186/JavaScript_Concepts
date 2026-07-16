@@ -1,8 +1,11 @@
 /*
-we have individual object for one class and if value of the variable is ame for all the objects
+we have individual object for one class and if value of the variable is same for all the objects
 1. every variable in object level will occupy certain amount of memory - memory wastage
 2. we cannot modify the value in all the places at once.
 --to overcome these problems we will use static keyword.
+
+static variable/functions/methods : call it by using class name
+non static variable/functions/methods : call it by using objects reference name
  */
 
 class Test {
@@ -32,3 +35,28 @@ Test.m1(); // This m1 static method
 let test= new Test();
 console.log(test.b); //200
 test.m2();  //This m2 non-static method
+
+
+class Car{
+    static wheel=4;
+
+    constructor(name, model, price){
+        this.name =name;
+        this.model=model;
+        this.price=price;
+    }
+
+    static stop(){
+        console.log('car ---- stop')
+    }
+
+    drive(){
+        console.log(this.name + " is drivig")
+    }
+}
+let c1= new Car("Honda","Civic",50);
+console.log(`${c1.name}, ${c1.model}, ${c1.price}, ${c1.wheel}`)  //Honda, Civic, 50, undefined
+console.log(`${c1.name}, ${c1.model}, ${c1.price}, ${Car.wheel}`)  //Honda, Civic, 50, 4
+console.log(Car.wheel);  //4
+Car.stop()   //car ---- stop
+c1.drive(); //Honda is drivig
