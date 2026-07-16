@@ -117,4 +117,5 @@ car.startEngine()
 bike.bikeColor();
 bike.stopEngine();
 
-//multiple inheritance is not supported by JS
+//multiple inheritance is not supported by JS 
+//multi level inheritance: we can achieve 
