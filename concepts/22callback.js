@@ -32,3 +32,48 @@ function displayMsg(msg){
 }
 
 printInfo("John", displayMsg)
+
+
+//fetching user data
+function fetchUserData(userId, callback){
+    setTimeout(function(){
+        const users ={
+            1: {id:1, name :"John"},
+            2: {id:2, name: "Smith"}
+        };
+        const user = users[userId]
+        if(user){
+            callback(null, user)
+
+        }
+        else{
+            callback("User not foud", null)
+        }
+    },6000)
+}
+
+//callback function:
+function handleUserData(error, user){
+    if(error){
+        console.log("Error : " , error)
+    }
+    else{
+        console.log("user : " , user )
+    }
+}
+
+fetchUserData(102, handleUserData)  //Error : User not foud
+fetchUserData(1, handleUserData)  //user :  { id: 1, name: 'John' }
+
+function performOperation(a,b, callback){
+    console.log(a,b);
+    let c = a+b;
+    setTimeout(function(){
+        callback(c)
+    }, 8000)
+}
+function printResult(result){
+    console.log(result)
+};
+
+performOperation(10,20,printResult)
